@@ -20,5 +20,8 @@
   "dockerfile": {
     "fileMatch": ["Dockerfile"],
     "pinDigests": true
-  }
+  },
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "branchConcurrentLimit": 0
 }
