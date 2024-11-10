@@ -1,12 +1,12 @@
-FROM node:18.20.3-alpine3.18@sha256:8863523fed890ce945343aebf959daa56e6b089de1851074f4fe22fe86c04399
+FROM node:22.2.0-alpine3.18@sha256:a46d9fcb38cae53de45b35b90f6df232342242bebc9323a417416eb67942979e
 
 WORKDIR /app
 
 # Example for multiple Base Images
 FROM nginx:1.24.0-alpine AS proxy
-FROM redis:7.2.3-alpine AS cache
+FROM redis:7.4.1-alpine@sha256:de13e74e14b98eb96bdf886791ae47686c3c5d29f9d5f85ea55206843e3fce26 AS cache
 FROM ubuntu:24.04@sha256:ab64a8382e935382638764d8719362bb50ee418d944c1f3d26e0c99fae49a345 AS ubuntu
-FROM alpine:3.19.4@sha256:ae65dbf8749a7d4527648ccee1fa3deb6bfcae34cbc30fc67aa45c44dcaa90ee
+FROM alpine:3.20.3@sha256:beefdbd8a1da6d2915566fde36db9db0b524eb737fc57cd1367effd16dc0d06d
 
 COPY package.json .
 RUN npm install
