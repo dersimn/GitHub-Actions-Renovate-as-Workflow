@@ -19,7 +19,8 @@
   ],
   "dockerfile": {
     "fileMatch": ["Dockerfile"],
-    "pinDigests": true
+    "pinDigests": true,
+    "automerge": true
   },
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
