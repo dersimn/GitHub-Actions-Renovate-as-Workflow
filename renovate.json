@@ -9,7 +9,8 @@
     {
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
-      "automerge": true
+      "automerge": true,
+      "platformAutomerge": false
     },
     {
       "matchManagers": ["npm"],
@@ -20,9 +21,11 @@
   "dockerfile": {
     "fileMatch": ["Dockerfile"],
     "pinDigests": true,
-    "automerge": true
+    "automerge": true,
+    "platformAutomerge": false
   },
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
-  "branchConcurrentLimit": 0
+  "branchConcurrentLimit": 0,
+  "platformAutomerge": false
 }
