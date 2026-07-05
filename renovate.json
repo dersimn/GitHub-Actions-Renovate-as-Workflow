@@ -7,12 +7,6 @@
   "enabledManagers": ["dockerfile", "npm"],
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
-      "automerge": true,
-      "platformAutomerge": false
-    },
-    {
       "matchManagers": ["npm"],
       "matchDepTypes": ["dependencies"],
       "rangeStrategy": "pin"
@@ -20,12 +14,10 @@
   ],
   "dockerfile": {
     "fileMatch": ["Dockerfile"],
-    "pinDigests": true,
-    "automerge": true,
-    "platformAutomerge": false
+    "pinDigests": true
   },
+  "automerge": false,
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
-  "branchConcurrentLimit": 0,
-  "platformAutomerge": false
+  "branchConcurrentLimit": 0
 }
